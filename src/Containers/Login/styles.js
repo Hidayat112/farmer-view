@@ -1,124 +1,98 @@
-import { windowHeight, windowWidth } from '@/Utilities/helper'
-import { StyleSheet, I18nManager } from 'react-native'
+import { Colors, fontFamily, FontSize, windowHeight } from '@/Theme/Variables'
+import { StyleSheet } from 'react-native'
 import { RFValue } from 'react-native-responsive-fontsize'
-export const styles = StyleSheet.create({
-  mainContainer: {
-    marginHorizontal: windowWidth * 0.1,
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    alignSelf: 'center',
-    height: windowHeight * 0.57,
-    position: 'absolute',
-    marginTop: RFValue(60),
-    zIndex: 1,
-  },
-  accountLogin: {
-    // fontWeight: 'bold',
-    fontSize: RFValue(28),
-    fontFamily: 'NotoSansHebrew-Bold',
-    color: 'white',
-    marginBottom: RFValue(18),
-  },
-  loginMessage: {
-    fontSize: RFValue(14),
-    color: 'white',
-    // paddingHorizontal: windowWidth * 0.024,
-    textAlign: 'center',
-    marginBottom: RFValue(54),
-    // fontFamily: "NotoSansHebrew-Regular",
-  },
-  input: {
-    backgroundColor: 'rgba(255, 255, 255, 0.2)',
-    width: '100%',
-    height: RFValue(56),
-    borderRadius: 100,
-    paddingHorizontal: RFValue(30),
-    // marginTop: windowWidth * 0.022,
-    color: 'rgba(255,255,255,0.7)',
-    fontFamily: 'NotoSansHebrew-Regular',
-    padding: 0,
-    fontSize: RFValue(16),
-    textAlign: I18nManager.isRTL ? 'right' : 'left',
-    // // fontFamily: fontFamily,
-  },
-  loginButton: {
-    backgroundColor: '#00C4FF',
-    width: '100%',
-    height: RFValue(56),
-    borderRadius: 100,
-    paddingTop: RFValue(2),
-    color: 'white',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'row',
-    zIndex: 1,
-    // // fontFamily: fontFamily,
-  },
-  loginButtonText: {
-    color: 'white',
-    marginRight: RFValue(10),
-    fontSize: RFValue(20),
-    // paddingHorizontal: windowWidth * 0.017,
-    // marginTop: windowWidth * 0.027,
-    fontFamily: 'NotoSansHebrew-Bold',
-    // backgroundColor: 'red',
-    // // fontFamily: fontFamily,
-  },
-  lottieView: {
-    alignItems: 'center',
-    marginTop: -windowHeight * 0.37,
-  },
-  lottie: {
-    width: '120%',
-    bottom: 40,
-  },
-  errorTransparent: { opacity: 0 },
-  errors: {
-    color: '#FF7F7F',
-    paddingHorizontal: windowWidth * 0.05,
-    marginVertical: RFValue(5),
-    fontSize: windowWidth * 0.03,
-  },
-  errorContainer: {
-    width: '100%',
-    alignItems: 'flex-start',
-  },
-  forgotContainer: {
-    alignItems: 'center',
-    marginTop: windowHeight * 0.04,
-  },
 
-  forgotText: {
-    // // fontFamily: fontFamily,
-    fontFamily: 'NotoSansHebrew-Regular',
-    color: '#00C4FF',
-    fontSize: RFValue(16),
-    marginBottom: RFValue(8),
+export const styles = StyleSheet.create({
+  headerStyle: {
+    flexDirection: 'row',
+    width: '100%',
+    paddingHorizontal: RFValue(26),
+    marginTop: RFValue(32),
   },
-  protectText: {
-    color: '#00C4FF',
-    // fontSize: windowHeight * 0.021,
-    fontFamily: 'NotoSansHebrew-Bold',
-    fontSize: RFValue(18),
-    // fontWeight: 'bold',
+  backIconStyle: {
+    height: RFValue(20),
+    width: RFValue(30),
   },
-  appNameBanner: {
-    position: 'absolute',
-    bottom: RFValue(80),
-    alignSelf: 'center',
+  titleStyle: {
+    fontFamily: fontFamily,
+    fontSize: FontSize.small,
+    fontWeight: '700',
+    color: Colors.darkGreen,
+    marginLeft: RFValue(8),
+    
   },
-  backgroundContainer: {
-    position: 'absolute',
-    bottom: -RFValue(20),
-    left: -windowWidth / 5,
+  mainContainer: {
+    paddingHorizontal: RFValue(22),
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  backgroundImage: {
-    position: 'absolute',
-    bottom: 0,
-    flex: 1,
-    width: windowWidth / 1.2,
-    height: undefined,
-    aspectRatio: 0.807,
+  mobileInputContainer: {
+    marginTop: RFValue(59),
+    alignSelf:"flex-start",
+    width:"100%"
   },
+  mobileInputText: {
+    fontSize: RFValue(14),
+    color: Colors.darkGreen,
+    fontWeight: '700',
+    fontFamily:fontFamily
+
+  },
+  mobileInput: {
+    marginTop: RFValue(7),
+    fontWeight: '700',
+    borderRadius: RFValue(5),
+  },
+  otpStyle: {
+    marginTop:RFValue(41),
+    textAlign: 'center',
+    fontSize: RFValue(20),
+    fontWeight: '700',
+    fontFamily:fontFamily,
+    color: Colors.green,
+    letterSpacing:0.4
+  },
+  otpMessage: {
+    marginTop: RFValue(6),
+    fontSize: RFValue(14),
+    fontWeight: '700',
+    color: Colors.darkGreen,
+    fontFamily:fontFamily
+  },
+  secondsText:{
+    marginTop: RFValue(7),
+    fontSize: RFValue(12),
+    fontWeight: '600',
+    color: Colors.black,
+    fontFamily:fontFamily,
+    alignSelf:"flex-end"
+  },
+  otpNotRecieveContainer:{
+    marginTop:RFValue(53),
+    flexDirection:"row",
+  },
+  otpNotRecieve:{
+    fontSize: RFValue(12),
+    fontWeight: '700',
+    color: Colors.darkGreen,
+    fontFamily:fontFamily,
+  },
+  otpNotResend:{
+    fontSize: RFValue(12),
+    fontWeight: '700',
+    color: Colors.black,
+    fontFamily:fontFamily,
+  },
+  termsStyle:{
+    marginTop:RFValue(200),
+  },
+  termsTextStyle:{
+    fontSize: RFValue(12),
+    fontWeight: '700',
+    color: Colors.black,
+    fontFamily:fontFamily,
+  },
+  buttonStyle:{
+      marginTop:RFValue(22)
+  }
 })

@@ -1,6 +1,6 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { ExampleContainer, OtpScreen } from '@/Containers'
+import { ExampleContainer } from '@/Containers'
 
 const Tab = createBottomTabNavigator()
 
@@ -10,7 +10,7 @@ const MainNavigator = () => {
     <Tab.Navigator>
       <Tab.Screen
         name="Home"
-        component={OtpScreen}
+        component={ExampleContainer}
         options={{
           tabBarIconStyle: { display: 'none' },
           tabBarLabelPosition: 'beside-icon',

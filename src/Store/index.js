@@ -14,10 +14,9 @@ import {
 
 import { api } from '@/Services/api'
 import theme from './Theme'
-import commons from './Common'
+
 const reducers = combineReducers({
   theme,
-  commons,
   api: api.reducer,
 })
 

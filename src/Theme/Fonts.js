@@ -5,37 +5,36 @@ import { StyleSheet } from 'react-native'
 
 /**
  *
- * @param Theme can be spread like {Colors, NavigationColors, Gutters, Layout, Common, ...args}
  * @return {*}
  */
 export default function ({ FontSize, Colors }) {
   return StyleSheet.create({
     textSmall: {
       fontSize: FontSize.small,
-      color: Colors.text,
+      fontFamily:"Inter"
     },
     textRegular: {
       fontSize: FontSize.regular,
-      color: Colors.text,
+      fontFamily:"Inter"
     },
     textLarge: {
       fontSize: FontSize.large,
-      color: Colors.text,
+      fontFamily:"Inter"
     },
     titleSmall: {
       fontSize: FontSize.small * 2,
       fontWeight: 'bold',
-      color: Colors.text,
+      fontFamily:"Inter"
     },
     titleRegular: {
       fontSize: FontSize.regular * 2,
       fontWeight: 'bold',
-      color: Colors.text,
+      fontFamily:"Inter"
     },
     titleLarge: {
       fontSize: FontSize.large * 2,
       fontWeight: 'bold',
-      color: Colors.text,
+      fontFamily:"Inter"
     },
     textCenter: {
       textAlign: 'center',

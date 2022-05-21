@@ -6,7 +6,7 @@ export default function () {
   return {
     logo: {
       uri:
-        'https://thecodingmachine.github.io/react-native-drhack/img/TOM-small.png',
+        'https://thecodingmachine.github.io/react-native-farmerviews/img/TOM-small.png',
     },
   }
 }

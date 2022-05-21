@@ -5,18 +5,25 @@
  * That allows to change them more easily later on.
  */
 
+import { RFValue } from "react-native-responsive-fontsize"
+import {Dimensions} from "react-native"
 /**
  * Colors
  */
 export const Colors = {
   // Example colors:
   transparent: 'rgba(0,0,0,0)',
-  inputBackground: '#FFFFFF',
+  inputBackground: '#EFEFE7',
   white: '#ffffff',
-  text: '#212529',
-  primary: '#E14032',
+  black:'#000000',
+  placeHolderText: 'rgba(108, 172, 78, 1)',
+  placeHolderTextLight: 'rgba(108, 172, 78, 0.5)',
+  primary: '#EFEFE7',
   success: '#28a745',
   error: '#dc3545',
+  borderColorLightGreen:"#6CAC4E",
+  green:"#6CAC4E",
+  darkGreen:"#026937"
 }
 
 export const NavigationColors = {
@@ -27,9 +34,9 @@ export const NavigationColors = {
  * FontSize
  */
 export const FontSize = {
-  small: 16,
-  regular: 20,
-  large: 40,
+  small: RFValue(14),
+  regular: RFValue(16),
+  large: RFValue(18)
 }
 
 /**
@@ -46,9 +53,16 @@ export const MetricsSizes = {
   large,
 }
 
+export const fontFamily = "Inter"
+
+export const windowWidth = Dimensions.get('window').width;
+export const windowHeight = Dimensions.get('window').height;
+
 export default {
   Colors,
   NavigationColors,
   FontSize,
   MetricsSizes,
+  windowWidth,
+  windowHeight
 }

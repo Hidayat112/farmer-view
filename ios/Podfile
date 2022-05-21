@@ -1,10 +1,9 @@
 require_relative '../node_modules/react-native/scripts/react_native_pods'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-
 platform :ios, '11.0'
 
-target 'drhack' do
+target 'farmerViews' do
   config = use_native_modules!
 
   use_react_native!(
@@ -13,11 +12,7 @@ target 'drhack' do
     :hermes_enabled => true
   )
 
-  pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
-
-  pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
-
-  target 'drhackTests' do
+  target 'farmerViewsTests' do
     inherit! :complete
     # Pods for testing
   end

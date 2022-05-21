@@ -14,6 +14,10 @@ export default function () {
     columnReverse: {
       flexDirection: 'column-reverse',
     },
+    fillDefault:{
+      flex:1,
+      backgroundColor:"#EFEFE7"
+    },
     colCenter: {
       flexDirection: 'column',
       alignItems: 'center',
@@ -84,6 +88,7 @@ export default function () {
     /* Sizes Layouts */
     fill: {
       flex: 1,
+      backgroundColor:"red"
     },
     fullSize: {
       height: '100%',
